@@ -1,0 +1,75 @@
+body{
+    font-family: sans-serif;
+}
+ 
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    height: 4rem;
+}
+ 
+.logo {
+    font-size: 2rem;
+}
+ 
+nav {
+    width: 30rem;
+}
+ 
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+ 
+nav ul li a {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+}
+ 
+nav ul li a:hover {
+    background-color: #0dac30;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.reachUs-button {
+    padding: 1rem;
+    background-color: #0dac30;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.reachUs-button:hover{
+    background-color: #1ac840;
+}
+ 
+h1{
+    text-align: center;
+    color:forestgreen;
+    margin:30px 0 50px;
+    
+}
+.gallery{
+    margin:10px 50px;
+
+}
+.gallery img{
+    width:230px;
+    padding:5px;
+    filter:grayscale(100%);
+    transition: .1s;
+}
+.gallery img hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+    transition: .1s;
+}

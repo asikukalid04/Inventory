@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'register.dart'; 
+import 'register.dart';
 import 'login.dart';
 
 void main() => runApp(MyApp());
@@ -9,12 +9,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-      primarySwatch: Colors.green,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
-      
+        primarySwatch: Colors.yellow,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-       home: HomeScreen('Welcome!!!'),
-       
+      home: HomeScreen('Welcome!!!'),
     );
   }
 }
@@ -26,9 +24,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:Colors.green,
+        backgroundColor: Colors.yellow,
         title: Text('Welcome!!!'),
-        
       ),
       body: Stack(
         children: <Widget>[
@@ -39,7 +36,7 @@ class HomeScreen extends StatelessWidget {
               fit: BoxFit.contain,
             ),
           ),
-          
+
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -47,7 +44,6 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 20),
                 WideButton(
                   label: 'Register',
-                  
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -90,14 +86,14 @@ class WideButton extends StatelessWidget {
         width: 200,
         height: 50,
         decoration: BoxDecoration(
-          color: Colors.green, 
+          color: Colors.yellow,
           borderRadius: BorderRadius.circular(25),
         ),
         child: Center(
-          child: Text( 
+          child: Text(
             label,
             style: TextStyle(
-            color: Colors.white,
+              color: Colors.white,
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),

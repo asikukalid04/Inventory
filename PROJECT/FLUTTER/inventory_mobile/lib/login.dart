@@ -6,7 +6,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.yellow,
         title: Text('Login Page'),
       ),
       body: Center(
@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
               },
                 style: ButtonStyle(
            backgroundColor: MaterialStateProperty.all<Color>
-                  (Colors.green), 
+                  (Colors.yellow), 
                        ),
 
               
@@ -46,7 +46,7 @@ class LoginPage extends StatelessWidget {
               },
               style: ButtonStyle(
             foregroundColor: MaterialStateProperty.all
-              <Color>(Colors.green), 
+              <Color>(Colors.yellow), 
               ),
               child: Text('Forgot Password?'),
             ),

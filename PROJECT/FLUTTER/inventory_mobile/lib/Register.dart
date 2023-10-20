@@ -31,7 +31,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.yellow,
         title: Text('Register'),
       ),
       body: Padding(
@@ -57,7 +57,7 @@ class _RegisterPageState extends State<RegisterPage> {
               onPressed: _registerUser,
               style: ButtonStyle(
            backgroundColor: MaterialStateProperty.all<Color>
-                  (Colors.green),
+                  (Colors.yellow),
                        ),
 
               child: Text('Register'),
