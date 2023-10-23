@@ -1,0 +1,59 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Gallery</title>
+    </head>
+    <link rel="stylesheet" href="style3.css">
+</header>   
+    <body>
+        <a href = "{% url 'about_page' %} "> ABOUT </a>
+        <a href = "{% url 'contact_page' %} "> CONTACT </a>
+        <a href = "{% url 'services_page' %} "> SERVICES </a>
+        <a href = "{% url 'home_page' %} "> HOME </a>
+        <!-- Header section -->
+        <header>
+            <div class="logo">SBK IT SOLUTIONS</div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="reachUs-button">Call us</button>
+        </header>
+    <body>
+            <h1>SBK IT SOLUTIONS GALLERY</h1>
+            <div class="gallery">
+                <img src="{% static 'image/a.jpg' %}">
+                <img src="{% static 'image/b.jpg' %}">
+                <img src="{% static 'image/c.jpg' %}">
+                <img src="{% static 'image/d.jpg' %}">
+                <img src="{% static 'image/e.jpg' %}">
+                <img src="{% static 'image/f.jpg' %}">
+                <img src="{% static 'image/g.jpg' %}">
+                <img src="{% static 'image/h.jpg' %}">
+                <img src="{% static 'image/i.jpg' %}">
+                <img src="{% static 'image/j.jpg' %}">
+                <img src="{% static 'image/k.jpg' %}">
+                <img src="{% static 'image/k.jpg' %}">
+                <img src="{% static 'image/l.jpg' %}">
+                <img src="{% static 'image/m.jpg' %}">
+                <img src="{% static 'image/n.jpg' %}">
+                <img src="{% static 'image/o.jpg' %}">
+                <img src="{% static 'image/p.jpg' %}">
+                <img src="{% static 'image/r.jpg' %}">
+            </div>
+    </body>
+</section align-items = "center">
+  
+<!-- Footer section -->
+<footer>
+    <p>© 2023 SBK IT SOLUTIONS. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+    </html>
