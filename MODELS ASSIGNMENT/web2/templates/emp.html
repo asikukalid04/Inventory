@@ -1,0 +1,13 @@
+{% load static%}<!DOCTYPE html>
+<html lang="en">
+ <body>
+    <a href = "{% url 'home_page' %} "> HOME </a>
+    <form method = "POST">
+        {% csrf_token %}
+        {{form}}
+    <button>submit</button>
+    </form>
+    {{employee}}
+   </body>
+</html>
+    
