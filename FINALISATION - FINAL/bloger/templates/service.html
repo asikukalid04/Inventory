@@ -1,0 +1,48 @@
+
+<html>
+    {% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+<div class = "container">
+    <form method = "POST">
+        {% csrf_token %}
+        {{form4}}
+        <input type = "submit" class = "btn btn-primary">
+    </form>
+    {% if msg %}
+      {{msg}}
+    {% endif %}
+    <table class = "table table-unstriped">
+        <thead>
+            <tr>
+                <th scope = "col">PackageID</th>
+                <th scope = "col">Name</th>
+                <th scope = "col">Description</th>
+                <th scope = "col">Price</th>
+               
+            </tr>
+        </thead>
+        <tbody  class="table-warning">
+           {% for service in services %}
+        <tr>
+            <th scope = "row">{{service.PackageID}}</th>
+            <td>{{service.Name}}</td>
+            <td>{{service.Description}}</td>
+            <td>{{service.Price}}</td>
+            <td>
+                <a href = "{%  url 'edit_service_page' service.PackageID %}" onclick = " return confirm ('ARE YOU SURE YOU WANT TO UPDATE THIS RECORD?')">Update</a>|
+                <a href = "{% url 'delete_service_page' service.PackageID%}"
+                onclick = " return confirm ('ARE YOU SURE YOU WANT TO DELETE THIS RECORD?')">
+                Delete
+                </a>|
+                <a href = "{%  url 'print_service_page' service.PackageID %}" onclick = " return confirm ('ARE YOU SURE YOU WANT TO PRINT THIS RECORD?')">Print</a>
+            </td>
+        </tr>
+           {% endfor %} 
+        </tbody>
+    </table>
+
+</div>
+    {% endblock content %}
+    

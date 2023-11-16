@@ -1,0 +1,18 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+
+    <h1>Payment Reciept: Note keep it until vehicle is delivered </h1>
+
+
+    <ul>
+    <p>TransactionID       : {{ payment.TransactionID}}</p>
+    <p>Amount              : {{ payment.Amount }}</p>
+    <p>CustomerID          : {{ payment.CustomerID}}</p>
+    <p>PackageID           : {{ payment.PackageID}}</p>
+    <p>PaymentMethod       : {{ payment.PaymentMethod}}</p>
+    <p>PaymentDate         : {{ payment.PaymentDate}}</p>
+    </ul>
+{% endblock content %}

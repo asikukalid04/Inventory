@@ -1,0 +1,17 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+
+    <ul>
+    <p>EmployeeID   : {{ employee.EmployeeID}}</p>
+    <p>FirstName    : {{ employee.FirstName }}</p>
+    <p>LastName     : {{ employee.LastName}}</p>
+    <p>Role      : {{ employee.Role}}</p>
+    <p>Address        : {{ employee.Address}}</p>
+    <p>Contact      : {{ employee.Contact}}</p>
+    <p>Email     : {{ employee.Email}}</p>
+    <p>WorkShedule: {{ employee.WorkShedule}}</p>
+    </ul>
+{% endblock content %}

@@ -1,0 +1,13 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+
+    <ul>
+    <p>PackageID: {{service.PackageID}}</p>
+    <p>Name: {{ service.Name }}</p>
+    <p>Description: {{ service.Description}}</p>
+    <p>Price: {{ service.Price}}</p>
+    </ul>
+{% endblock content %}

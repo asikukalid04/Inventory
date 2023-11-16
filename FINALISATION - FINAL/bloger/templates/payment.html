@@ -1,0 +1,47 @@
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+<div class = "container">
+    <form method = "POST">
+        {% csrf_token %}
+        {{form5}}
+        <input type = "submit" class = "btn btn-primary">
+    </form>
+    {% if msg %}
+      {{msg}}
+    {% endif %}
+    <table class = "table table-unstriped">
+        <thead>
+            <tr>
+                <th scope = "col">TransactionID</th>
+                <th scope = "col">Amount</th>
+                <th scope = "col">PaymentMethod</th>
+                <th scope = "col">PaymentDate</th>
+                <th scope = "col">PackageID</th>
+                <th scope = "col">CustomerID</th>
+            </tr>
+        </thead>
+        <tbody  class="table-warning">
+           {% for payment in payments %}
+        <tr>
+            <th scope = "row">{{payment.TransactionID}}</th>
+            <td>{{payment.Amount}}</td>
+            <td>{{payment.PaymentMethod}}</td>
+            <td>{{payment.PaymentDate}}</td>
+            <td>{{payment.PackageID}}</td> 
+            <td>{{payment.CustomerID}}</td> 
+            <td>
+                <a href = "{%  url 'edit_payment_page' payment.TransactionID %}" onclick = " return confirm ('ARE YOU SURE YOU WANT TO UPDATE THIS RECORD?')">Update</a>|
+                <a href = "{% url 'delete_payment_page' payment.TransactionID%}"
+                onclick = " return confirm ('ARE YOU SURE YOU WANT TO DELETE THIS RECORD?')">
+                Delete
+                </a>|
+                <a href = "{%  url 'print_payment_page' payment.TransactionID %}" onclick = " return confirm ('ARE YOU SURE YOU WANT TO PRINT THIS RECORD?')">Print</a>
+            </td>          
+        </tr>
+           {% endfor %} 
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

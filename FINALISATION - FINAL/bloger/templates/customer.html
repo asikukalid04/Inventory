@@ -1,0 +1,49 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+<div class = "container">
+    <form method = "POST">
+        {% csrf_token %}
+        {{form2}}
+        <input type = "submit" class = "btn btn-primary ">
+    </form>
+    {% if msg %}
+      {{msg}}
+    {% endif %}
+    <table class = "table table-unstriped" >
+        <thead>
+            <tr>
+                <th scope = "col">CustomerID</th>
+                <th scope = "col">FirstName</th>
+                <th scope = "col">LastName</th>
+                <th scope = "col">Contact</th>
+                <th scope = "col">Email</th>
+                <th scope = "col">Address</th>
+            </tr>
+        </thead>
+        <tbody  class="table-warning">
+           {% for customer in customers %}
+        <tr>
+            <th scope = "row">{{customer.CustomerID}}</th>
+            <td>{{customer.FirstName}}</td>
+            <td>{{customer.LastName}}</td>
+            <td>{{customer.Contact}}</td>
+            <td>{{customer.Email}}</td>
+            <td>{{customer.Address}}</td>
+            <td>
+                <a href = "{%  url 'edit_customer_page' customer.CustomerID %}" onclick = " return confirm ('ARE YOU SURE YOU WANT TO UPDATE THIS RECORD?')">Update</a>|
+                <a href = "{% url 'delete_customer_page' customer.CustomerID%}"
+                onclick = " return confirm ('ARE YOU SURE YOU WANT TO DELETE THIS RECORD?')">
+                Delete
+                </a>|
+                <a href = "{%  url 'print_customer_page' customer.CustomerID %}" onclick = " return confirm ('ARE YOU SURE YOU WANT TO PRINT THIS RECORD?')">Print</a>
+            </td>
+        </tr>
+           {% endfor %} 
+        </tbody>
+    </table>
+
+</div>
+{% endblock content %}

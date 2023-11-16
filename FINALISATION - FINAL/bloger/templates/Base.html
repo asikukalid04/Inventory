@@ -1,0 +1,55 @@
+
+<html lang>
+    {% load crispy_forms_tags %}
+    {% load static %}
+    <link rel = "stylesheet" href = "{% static 'css/bootstrap.min.css' %}"> 
+<head> 
+</head>
+<body>
+  <h1 style = "text-align:center">GLOBLINE CAR WASH SERVICES</h2>
+  <br>
+  <br>
+  <br>
+    <nav class="navbar navbar-dark bg-secondary" text-color = "blue">
+        <div class="container-fluid">
+          {% if user.is_authenticated %}
+          <a class="navbar-brand" href = "{% url 'customer_page' %} ">CUSTOMERS</a>
+          <a class="navbar-brand" href = "{% url 'vehicle_page' %} ">VEHICLES</a>
+          <a class="navbar-brand" href = "{% url 'service_page' %} ">SERVICES</a>
+          <a class="navbar-brand" href = "{% url 'payment_page' %} ">PAYMENTS</a>
+          <a class="navbar-brand" href = "{% url 'employee_page' %} ">EMPLOYEE</a>
+          <a class="navbar-brand" href = "{% url 'logout' %} ">LOGOUT</a>
+         {%else%}
+          <a class="navbar-brand" href = "{% url 'signup_page' %}">SIGN UP</a>     
+          <a class="navbar-brand" href = "{% url 'password_reset' %} ">RESET</a>    
+          <a class="navbar-brand" href = "{% url 'login' %} ">LOGIN</a>                     
+          {% endif %}
+          {% if user.is_authenticated %}
+          <h4>Welcome, {{ user.username }}. Thanks for logging in.</h4>
+      {% else %}
+          <h4>Welcome, new user. Please log in.</h4>
+      {% endif %}
+        </div>
+      </nav>  
+      <br>      
+      <br>   
+      <br> 
+      <br>   
+{% block content %}
+
+
+{% endblock content %}
+<hr class="dropdown-divider">
+<br>   
+<br>
+<br>
+<br>   
+<br>
+<br>   
+</div>
+</body>
+<section align = "center">
+<footer>
+<p>© 2023 Globline car wash. All Rights Reserved.</p>
+</section>
+</html>

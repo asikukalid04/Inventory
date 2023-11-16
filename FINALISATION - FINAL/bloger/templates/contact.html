@@ -1,0 +1,15 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+    <a href = "{% url 'home_page' %} "> HOME </a>
+    <a href = "{% url 'appointment_page' %}"> APPOINTMENTS </a>
+    <a href = "{% url 'service_page' %} "> SERVICES </a>
+    <a href = "{% url 'vehicle_page' %} "> VEHICLES</a>
+    <a href = "{% url 'payment_page' %} "> PAYMENTS </a>
+    <a href = "{% url 'customer_page' %} "> CUSTOMERS </a>
+    <a href = "{% url 'inventory_page' %} "> INVENTORY </a> 
+    <a href = "{% url 'employee_page' %} "> EMPLOYEE </a>
+    <a href = "{% url 'contact_page' %} "> CONTACT </a>
+    {% endblock content %}

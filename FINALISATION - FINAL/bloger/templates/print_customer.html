@@ -1,0 +1,15 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+
+    <ul>
+    <p>CustomerID   : {{ customer.CustomerID}}</p>
+    <p>FirstName    : {{ customer.FirstName }}</p>
+    <p>LastName     : {{ customer.LastName}}</p>
+    <p>Contact      : {{ customer.Contact}}</p>
+    <p>Email        : {{ customer.Email}}</p>
+    <p>Address      : {{ customer.Address}}</p>
+    </ul>
+{% endblock content %}

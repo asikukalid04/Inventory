@@ -1,0 +1,48 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+<div class = "container">
+    <form method = "POST">
+        {% csrf_token %}
+        {{form3}}
+        <input type = "submit" class = "btn btn-primary">
+    </form>
+    {% if msg %}
+      {{msg}}
+    {% endif %}
+    <table class = "table table-unstriped">
+        <thead>
+            <tr>
+                <th scope = "col">VehicleID</th>
+                <th scope = "col">Modal</th>
+                <th scope = "col">Licenseplate</th>
+                <th scope = "col">CustomerID</th>
+        </thead>
+        <tbody  class="table-warning">
+           {% for vehicle  in vehicles %}
+        <tr>
+            <th scope = "row">{{vehicle.VehicleID}}</th>
+            <td>{{vehicle.Modal}}</td>
+            <td>{{vehicle.Licenseplate}}</td>
+            <td>{{vehicle.CustomerID}}</td>  
+            <td>
+                <a href = "{%  url 'edit_vehicle_page' vehicle.VehicleID %}" onclick = " return confirm ('ARE YOU SURE YOU WANT TO UPDATE THIS RECORD?')">Update</a>|
+                <a href = "{% url 'delete_vehicle_page' vehicle.VehicleID%}"
+                onclick = " return confirm ('ARE YOU SURE YOU WANT TO DELETE THIS RECORD?')">
+                Delete
+                </a>|
+                <a href = "{%  url 'print_vehicle_page' vehicle.VehicleID %}" onclick = " return confirm ('ARE YOU SURE YOU WANT TO PRINT THIS RECORD?')">Print</a>
+
+            </td> 
+        </tr>        
+        </tr>      
+        {% endfor %} 
+    </tbody>
+    </table>
+    
+</div>
+   </body>
+</div>
+       {% endblock content %}
