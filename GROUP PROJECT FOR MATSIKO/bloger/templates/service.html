@@ -1,0 +1,42 @@
+
+<html>
+    {% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+    <p style = "text-align:center">!!!!!!NOTE THE SERVICE PACKAGE ID WITH THE PRICE!!!!!!</P>
+     <br>
+    <link rel = "stylesheet" href = "{% static 'css/bootstrap.min.css' %}">
+<div class = "container">
+    <form method = "POST">
+        {% csrf_token %}
+        {{form4}}
+    </form>
+    {% if msg %}
+      {{msg}}
+    {% endif %}
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th scope = "col">PackageID</th>
+                <th scope = "col">Name</th>
+                <th scope = "col">Description</th>
+                <th scope = "col">Price</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+           {% for service in services %}
+        <tr>
+            <th scope = "row">{{service.PackageID}}</th>
+            <td>{{service.Name}}</td>
+            <td>{{service.Description}}</td>
+            <td>{{service.Price}}</td>
+        </tr>
+           {% endfor %} 
+        </tbody>
+    </table>
+
+</div>
+    {% endblock content %}
+    

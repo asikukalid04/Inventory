@@ -1,0 +1,56 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+    <link rel = "stylesheet" href = "{% static 'css/bootstrap.min.css' %}">
+    <a href = "{% url 'home_page' %} "> HOME </a>
+    <a href = "{% url 'contact_page' %} "> CONTACT </a>
+    <a href = "{% url 'appointment_page' %}"> APPOINTMENTS </a>
+    <a href = "{% url 'service_page' %} "> SERVICES </a>
+    <a href = "{% url 'vehicle_page' %} "> VEHICLES</a>
+    <a href = "{% url 'payment_page' %} "> PAYMENTS </a>
+    <a href = "{% url 'customer_page' %} "> CUSTOMERS </a>
+    <a href = "{% url 'employee_page' %} "> EMPLOYEE </a>
+
+<div class = "container">
+    <form method = "POST">
+        {% csrf_token %}
+        {{form6}}
+        <input type = "submit" class = "btn btn-primary">
+        <input type = "button" class = "btn btn-danger">
+
+    </form>
+    {% if msg %}
+      {{msg}}
+    {% endif %}
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th scope = "col">ItemID</th>
+                <th scope = "col">Name</th>
+                <th scope = "col">Quantity</th>
+                <th scope = "col">UnitPrice</th>
+            </tr>
+        </thead>
+        <tbody>
+           {% for inventory in inventory %}
+        <tr>
+            <th scope = "row">{{inventory.ItemID}}</th>
+            <td>{{inventory.Name}}</td>
+            <td>{{inventory.Quantity}}</td>
+            <td>{{inventory.UnitPrice}}</td> 
+            <td>
+                <a href = "{%  url 'edit_inventory_page' inventory.ItemID %}">Edit</a>|
+                <a href = "{% url 'delete_inventory_page' inventory.ItemID%}"
+                onclick = " return confirm ('DO YOU WANT TO DELETE THIS VALUE?')">
+                Delete
+                </a>
+
+            </td>          
+        </tr>
+           {% endfor %} 
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

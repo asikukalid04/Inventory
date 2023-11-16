@@ -1,0 +1,66 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+    <link rel = "stylesheet" href = "{% static 'css/bootstrap.min.css' %}">
+<!-- SERVICES Section  -->
+<div id="testmonial" class="container-fluid wow fadeIn bg-dark text-light has-height-lg middle-items">
+    <h2 class="section-title my-5 text-center"> OUR SERVICES</h2>
+    <div class="row mt-3 mb-5">
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">VEHICLE WASH </h3>  
+                <div class="testmonial-body">
+                    <p> We do car washing with varying levels of detail and pricing
+                    </p>
+                     <p><a class="navbar-brand" href = "{% url 'service_page' %} ">Available packages</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">CAR PAINTING</h3>
+                <div class="testmonial-body">
+                    <p>We offer car painting and smoothening</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">VACUUMING</h3>
+                <div class="testmonial-body">
+                    <p>We also offer vacuuming services as bonus </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">BULB FILLING</h3>
+                <div class="testmonial-body">
+                    <p>We also offer tyre filling as bonus </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">MIRROR FIXING</h3>
+                <div class="testmonial-body">
+                    <p>We also offer tyre filling as bonus </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">TYRE FIXING</h3>
+                <div class="testmonial-body">
+                    <p>We also offer tyre filling as bonus </p>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    {% endblock content %}

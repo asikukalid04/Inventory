@@ -1,0 +1,46 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+    <link rel = "stylesheet" href = "{% static 'css/bootstrap.min.css' %}">
+  <!-- SERVICES Section  -->
+<div id="testmonial" class="container-fluid wow fadeIn bg-dark text-light has-height-lg middle-items">
+    <h2 class="section-title my-5 text-center">CONTACTS </h2>
+    <div class="row mt-3 mb-5">
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">ASIKU KALID</h3>  
+                <div class="testmonial-body">
+                    <p>General Manager</p>
+                     <p><a class="navbar-brand" href = " ">(256)753666272</a></p>
+                     <p><a class="navbar-brand" href = "mailto:asikukalid@gmail.com ">asiku.kalid@globline.com</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">ZAKIR MAMBO</h3>
+                <div class="testmonial-body">
+                    <p>General Accountant</p>
+                    <p><a class="navbar-brand" href = " ">(256)753666272</a></p>
+                    <p><a class="navbar-brand" href = " mailto:asikukalid@gmail.com">zair.mambo@globline.com</a></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">RAHUMA NAMUTEBI</h3>
+                <div class="testmonial-body">
+                    <p>Executive Director</p>
+                    <p><a class="navbar-brand" href = " ">(256)753666272</a></p>
+                    <p><a class="navbar-brand" href = " mailto:asikukalid@gmail.com">rahuma.namutebi@globline.com</a></p>
+                </div>
+        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    {% endblock content %}

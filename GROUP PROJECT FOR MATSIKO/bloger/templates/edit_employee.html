@@ -1,0 +1,21 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+    <link rel = "stylesheet" href = "{% static 'css/bootstrap.min.css' %}">
+    <h1 > EDIT- {{employee.FirstName}}</h1>
+<div class = "container">
+    <form method = "POST">
+        {% csrf_token %}
+        {{g}}
+        <input type = "submit" class = "btn btn-primary">
+        <input type = "Take notice" class = "btn btn-danger">
+    </form>
+    {% if msg %}
+      {{msg}}
+    {% endif %}
+    
+</div>  
+<a href = "{% url 'home_page' %} "> HOME </a>
+{% endblock content %}

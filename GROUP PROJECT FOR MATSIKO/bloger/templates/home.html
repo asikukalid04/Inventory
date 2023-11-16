@@ -1,0 +1,54 @@
+
+{% extends "Base.html" %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+    {% block content %}
+    <link rel = "stylesheet" href = "{% static 'css/bootstrap.min.css' %}">
+    <div id="testmonial" class="container-fluid wow fadeIn bg-dark text-light has-height-lg middle-items">
+        <h2 class="section-title my-5 text-center">GET STARTED WITH GLOBLINE</h2>
+        <div class="row mt-3 mb-5">
+            <div class="col-md-4 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <h3 class="testmonial-title">STEP 1 </h3>  
+                    <div class="testmonial-body">
+                        <p>Register with us as customer</p>
+                    </div>
+                    <div class="testmonial-body">
+                    <p>follow the link</p>
+                    <br>
+                        <p><a class="navbar-brand" href = "{% url 'customer_page' %} ">Register</a></p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <h3 class="testmonial-title">STEP 2</h3>
+                    <div class="testmonial-body">
+                        <p>Register your vehicle</p>
+                    </div>
+                    <div class="testmonial-body">
+                        <p>follow the link</p>
+                        <br>
+                        <p><a class="navbar-brand" href = "{% url 'vehicle_page' %} ">Register</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <h3 class="testmonial-title">STEP 3</h3>
+                    <div class="testmonial-body">
+                        <p>Make Your Appointment</p>
+                    </div>
+                    <div class="testmonial-body">
+                        <p>follow the link</p>
+                        <br>
+                        <p><a class="navbar-brand" href = "{% url 'appointment_page' %} ">Book for service</a></p>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% endblock content %}
