@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CLIENT.master.cs" Inherits="NIRA.CLIENT" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            border: 4px solid #000000;
+            background-color: #00FF00;
+        }
+        .auto-style2 {
+            font-size: xx-large;
+            color: #FFFFFF;
+            text-align: center;
+            background-color: #996633;
+        }
+        .auto-style4 {
+            height: 23px;
+            background-color: #996633;
+        }
+        .auto-style5 {
+            width: 92px;
+            height: 92px;
+        }
+        .auto-style7 {
+            color: #FFFFFF;
+            font-size: xx-large;
+            background-color: #996633;
+        }
+        .auto-style8 {
+            color: #FFFFFF;
+            text-align: center;
+            background-color: #996633;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="text-align: center">
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style2">
+                        <br />
+                        <img alt="" class="auto-style5" src="IMAGE/AM.jpg" /><br />
+                        <br />THE REPUBLIC OF UGANDA<br />NIRA</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7" style="text-align: center">NATIONAL IDENTIFICATION REGISTRATION AUTHORITY</td>
+                </tr>
+                <tr>
+                    <td class="auto-style7" style="text-align: center">www.nira.ug.com</td>
+                </tr>
+                <tr>
+                    <td class="auto-style8" colspan="1"><strong>HOME | ABOUT US | SERVICES | CONTACT US</strong> </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4"></td>
+                </tr>
+            </table>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

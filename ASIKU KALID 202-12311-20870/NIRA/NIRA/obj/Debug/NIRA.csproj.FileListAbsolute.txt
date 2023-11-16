@@ -1,0 +1,18 @@
+C:\Users\KALID\Desktop\NIRA\NIRA\NIRA\bin\NIRA.dll.config
+C:\Users\KALID\Desktop\NIRA\NIRA\NIRA\bin\NIRA.dll
+C:\Users\KALID\Desktop\NIRA\NIRA\NIRA\bin\NIRA.pdb
+C:\Users\KALID\Desktop\NIRA\NIRA\NIRA\obj\Debug\NIRA.csprojResolveAssemblyReference.cache
+C:\Users\KALID\Desktop\NIRA\NIRA\NIRA\obj\Debug\NIRA.dll
+C:\Users\KALID\Desktop\NIRA\NIRA\NIRA\obj\Debug\NIRA.pdb
+C:\Users\KALID\Desktop\NIRA - Copy\NIRA\NIRA\bin\NIRA.dll.config
+C:\Users\KALID\Desktop\NIRA - Copy\NIRA\NIRA\bin\NIRA.dll
+C:\Users\KALID\Desktop\NIRA - Copy\NIRA\NIRA\bin\NIRA.pdb
+C:\Users\KALID\Desktop\NIRA - Copy\NIRA\NIRA\obj\Debug\NIRA.csprojResolveAssemblyReference.cache
+C:\Users\KALID\Desktop\NIRA - Copy\NIRA\NIRA\obj\Debug\NIRA.dll
+C:\Users\KALID\Desktop\NIRA - Copy\NIRA\NIRA\obj\Debug\NIRA.pdb
+C:\Users\KALID\Desktop\ASIKU KALID 202-12311-20870\NIRA\NIRA\bin\NIRA.dll.config
+C:\Users\KALID\Desktop\ASIKU KALID 202-12311-20870\NIRA\NIRA\bin\NIRA.dll
+C:\Users\KALID\Desktop\ASIKU KALID 202-12311-20870\NIRA\NIRA\bin\NIRA.pdb
+C:\Users\KALID\Desktop\ASIKU KALID 202-12311-20870\NIRA\NIRA\obj\Debug\NIRA.csprojResolveAssemblyReference.cache
+C:\Users\KALID\Desktop\ASIKU KALID 202-12311-20870\NIRA\NIRA\obj\Debug\NIRA.dll
+C:\Users\KALID\Desktop\ASIKU KALID 202-12311-20870\NIRA\NIRA\obj\Debug\NIRA.pdb
